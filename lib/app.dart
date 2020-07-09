@@ -7,9 +7,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       title: "Neofechart",
+      theme: AppThemeData,
       debugShowCheckedModeBanner: false,
-      home: CupertinoPageScaffold(
-          backgroundColor: Color(0xFF1b1b1b), child: DashboardPage()),
+      home: CupertinoPageScaffold(child: DashboardPage()),
     );
   }
 }
