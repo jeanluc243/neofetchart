@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:neofetchart/views/dashboard_page.dart';
 
 class App extends StatelessWidget {
   @override
@@ -7,14 +8,9 @@ class App extends StatelessWidget {
       title: "Neofechart",
       debugShowCheckedModeBanner: false,
       home: CupertinoPageScaffold(
-        backgroundColor: CupertinoColors.darkBackgroundGray,
-        child: Center(
-          child: Text(
-            "Hello",
-            style: TextStyle(color: CupertinoColors.activeBlue),
-          ),
-        ),
-      ),
+          // backgroundColor: CupertinoColors.darkBackgroundGray,
+          backgroundColor: Color(0xFF1b1b1b),
+          child: DashboardPage()),
     );
   }
 }

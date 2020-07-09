@@ -17,9 +17,14 @@ static void my_application_activate(GApplication* application) {
   GtkHeaderBar *header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
   gtk_widget_show(GTK_WIDGET(header_bar));
   gtk_header_bar_set_title(header_bar, "Neofetchart");
+  // Center GTK
+  gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+  // Unfollow Screen
+  gtk_window_unfullscreen(window);
+
   gtk_header_bar_set_show_close_button(header_bar, TRUE);
   gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
-  gtk_window_set_default_size(window, 800, 600);
+  gtk_window_set_default_size(window, 600, 400);
   gtk_widget_show(GTK_WIDGET(window));
 
   g_autoptr(FlDartProject) project = fl_dart_project_new();
