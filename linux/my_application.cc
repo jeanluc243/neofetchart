@@ -21,11 +21,12 @@ static void my_application_activate(GApplication* application) {
   gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
   // Unfollow Screen
   
-  gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
+  // gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
 
   gtk_header_bar_set_show_close_button(header_bar, TRUE);
   gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
-  gtk_window_set_default_size(window, 800, 600);
+  gtk_window_set_default_size(window, 1024, 768); 
+  // gtk_widget_set_size_request(window, 1024, 768);
   gtk_widget_show(GTK_WIDGET(window));
 
   g_autoptr(FlDartProject) project = fl_dart_project_new();

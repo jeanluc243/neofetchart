@@ -19,14 +19,89 @@ class _DashboardPageState extends State<DashboardPage> {
                   SliverToBoxAdapter(
                     child: Fluid(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 64, bottom: 40),
-                        child: Text(
-                          "End Date",
-                          style: TextStyle(
-                              color: CupertinoColors.white, fontSize: 20),
+                          padding: EdgeInsets.only(top: 24, bottom: 24),
+                          child: Row(
+                            children: [
+                              Image(
+                                image: AssetImage("assets/images/logo.png"),
+                                width: 24,
+                              ),
+                              Text(
+                                "Neofetchart",
+                                style: TextStyle(fontSize: 24),
+                              )
+                            ],
+                          )),
+                    ),
+                  ),
+                  SliverFluidGrid(
+                    spacing: context.fluid(1),
+                    children: [
+                      // OS
+                      FluidCell.fit(
+                        size: context.fluid(3),
+                        child: Card(
+                          color: CupertinoColors.activeGreen,
+                          child: Container(
+                            height: 100,
+                          ),
                         ),
                       ),
-                    ),
+                      // Themes
+                      FluidCell.fit(
+                        size: context.fluid(3),
+                        child: Card(
+                          color: CupertinoColors.activeBlue,
+                          child: Container(
+                            height: 100,
+                          ),
+                        ),
+                      ),
+                      //
+                      FluidCell.fit(
+                        size: context.fluid(3),
+                        child: Card(
+                          color: CupertinoColors.destructiveRed,
+                          child: Container(
+                            height: 100,
+                          ),
+                        ),
+                      ),
+                      FluidCell.fit(
+                        size: context.fluid(3),
+                        child: Card(
+                          color: CupertinoColors.systemOrange,
+                          child: Container(
+                            height: 100,
+                          ),
+                        ),
+                      ),
+                      FluidCell.withFluidHeight(
+                        size: context.fluid(8),
+                        heightSize: context.fluid(4),
+                        child: Card(
+                          child: Container(),
+                          color: CupertinoColors.systemRed,
+                        ),
+                      ),
+                      FluidCell.withFluidHeight(
+                        size: context.fluid(4),
+                        heightSize: context.fluid(7),
+                        child: Card(
+                          child: Container(),
+                          color: CupertinoColors.systemTeal,
+                        ),
+                      ),
+                      FluidCell.fit(
+                        size: context.fluid(3),
+                        child: Card(
+                          color: CupertinoColors.systemOrange,
+                          child: Container(
+                            height: 100,
+                          ),
+                        ),
+                      ),
+                    ],
                   )
                 ],
               )),
