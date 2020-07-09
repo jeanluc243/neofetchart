@@ -7,7 +7,13 @@ class App extends StatelessWidget {
       title: "Neofechart",
       debugShowCheckedModeBanner: false,
       home: CupertinoPageScaffold(
-        child: Container(),
+        backgroundColor: CupertinoColors.darkBackgroundGray,
+        child: Center(
+          child: Text(
+            "Hello",
+            style: TextStyle(color: CupertinoColors.activeBlue),
+          ),
+        ),
       ),
     );
   }
